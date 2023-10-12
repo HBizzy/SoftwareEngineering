@@ -19,7 +19,7 @@ using namespace std;
 int main()
 {
     //Some constants 
-    const int high = 100, low = 10;
+    const int high = 95, low = 30, dLow = 5,medium = 70;
 
     // start filling the tank 
     int level = 5;
@@ -32,17 +32,25 @@ int main()
     } while ((level < 0) || (level > 100)); //Repeat until a valid number is entered
 
     // Mutuallly Exclusive Decision Pathway
-    if (level == 0) 
+    if (level == 0)
     {
         cout << "Tank is empty. It needs filling." << endl;
-    } 
-    else if (level <= low)                       // check the level
+    }
+    else if ((level > 0) && (level <= dLow))
+    {
+        cout << "Tank needs filling its dangerously low" << endl;
+    }
+    else if ((level <= low) && (level > dLow))                       // check the level
     {
         cout << "Tank is low and needs filling." << endl;
     }
+    else if ((level > low) && (level < medium))
+    {
+        cout << "Tank is at a medium level" << endl;
+    }
     else if (level < high) 
     {
-        cout << "Tank has sufficient fuel" << endl;
+        cout << "Tank is close to being full of fuel" << endl;
     }
     else {
         cout << "Tank is full" << endl;
