@@ -47,7 +47,14 @@ int main()
     // Store it in the integer variable code
     // Calculate the next value (code + 1)
     // Write out the new module string (correct answer is COMP1001).
+    //Read another two strings and discard
+    for (unsigned int n = 0; n < 2; n++) {
+        inputStream >> nextWord;
+    }
 
+    //We are now at the position where we find the code
+    inputStream >> code;    //Let's hope this is in the right place :)
+    cout << "New module code will be " << subjectArea << code + 1 << endl;
     // (iii) Close
     inputStream.close();
 
