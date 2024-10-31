@@ -24,6 +24,8 @@ namespace COMP1000 {
             }
         }
     public:
+
+
         //Constructor - v1 (has an additional parameter used for file logging)
         Rect(double w, double h, string id) {
             //Log message to terminal

@@ -17,14 +17,14 @@ static void updateArea(Rect_t& ref) {
     ref.area = ref.width * ref.height;
 }
 
-void setWidth(Rect_t& ref, float w) {
+void setWidth(Rect_t& ref, int w) {
     if (ref.width != w) {
         ref.width = w;
         updateArea(ref);
     }
 }
 
-void setHeight(Rect_t& ref, float h) {
+void setHeight(Rect_t& ref, int h) {
     if (ref.height != h) {
         ref.height = h;
         updateArea(ref);
